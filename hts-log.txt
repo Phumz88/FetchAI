@@ -1,0 +1,66 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 30 Sep 2025 10:13:26 at https://www.spark.ai/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+Fetch.AI
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.spark.ai/ -O1 "C:\My Web Sites\FetchAI" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+
+
+Information, Warnings and Errors reported for this mirror:
+
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+
+	such as username/password authentication for websites mirrored in this project
+
+	do not share these files/folders if you want these information to remain private
+
+
+
+10:14:09	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://www.spark.ai/)
+
+10:15:04	Error: 	"Not Found" (404) at link https://www.spark.ai/SparkAI_Main/templates/partials/footer.html (from https://www.spark.ai/)
+
+10:15:08	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js (from https://www.spark.ai/)
+
+10:15:08	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.spark.ai/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js (from https://www.spark.ai/)
+
+10:15:08	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.spark.ai/hubfs/hub_generated/module_assets/1/80621732745/1741029448912/module_menu.min.js (from https://www.spark.ai/)
+
+10:15:08	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.spark.ai/hubfs/hub_generated/module_assets/1/80626958481/1741029451819/module_main-hero.min.js (from https://www.spark.ai/)
+
+10:15:09	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.spark.ai/hubfs/hub_generated/module_assets/1/80871481706/1741029454930/module_featured-video-main.min.js (from https://www.spark.ai/)
+
+10:15:09	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js (from https://www.spark.ai/)
+Fetch.AI
+10:15:09	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js (from https://www.spark.ai/)
+
+10:16:21	Error: 	"Not Found" (404) at link https://www.spark.ai/blog/SparkAI_Main/templates/partials/footer.html (from https://www.spark.ai/blog/solving-the-last-mile-of-autonomous-farming)
+
+10:16:23	Error: 	"Not Found" (404) at link https://www.spark.ai/general/SparkAI_Main/templates/partials/footer.html (from https://www.spark.ai/general/terms)
+
+10:16:23	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js (from https://www.spark.ai/)
+
+10:16:23	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js (from https://www.spark.ai/)
+
+10:16:24	Warning: 	Retry after error -5 (error:00000001:lib(0):func(0):reason(1)) at link https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js (from https://www.spark.ai/)
+
+10:16:26	Error: 	"Not Found" (404) at link https://www.spark.ai/blog/page/SparkAI_Main/templates/partials/footer.html (from https://www.spark.ai/blog/page/2)
+
+10:17:13	Error: 	"Not Found" (404) at link https://www.spark.ai/staged-blog/blog/artificial-intelligence-machine-learning-computer-vision-glossary (from https://www.spark.ai/blog/what-is-remote-piloting)
+
+10:17:13	Error: 	"Not Found" (404) at link https://www.spark.ai/staged-blog/blog/how-to-wield-the-power-of-human-cognition-in-ai-workflows (from https://www.spark.ai/blog/what-is-remote-piloting)
+
+10:17:17	Error: 	"error:00000001:lib(0):func(0):reason(1)" (-5) after 2 retries at link https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js (from https://www.spark.ai/)
+
+10:17:17	Error: 	"error:00000001:lib(0):func(0):reason(1)" (-5) after 2 retries at link https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js (from https://www.spark.ai/)
+
+10:17:17	Error: 	"error:00000001:lib(0):func(0):reason(1)" (-5) after 2 retries at link https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js (from https://www.spark.ai/)
+
+10:17:17	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.spark.ai/blog/keep-ai-in-captivity-or-release-into-the-wild?hs_amp=true (from https://www.spark.ai/blog/keep-ai-in-captivity-or-release-into-the-wild)
+
+10:17:18	Error: 	"Not Found" (404) at link https://www.spark.ai/blog/author/SparkAI_Main/templates/partials/footer.html (from https://www.spark.ai/blog/author/sparkai)
+
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 56 seconds : 241 links scanned, 218 files written (268611504 bytes overall) [266976819 bytes received at 1131257 bytes/sec], 2994423 bytes transferred using HTTP compression in 110 files, ratio 26%, 4.5 requests per connection
+
+(11 errors, 11 warnings, 0 messages)
+
