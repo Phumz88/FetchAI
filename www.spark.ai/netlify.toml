@@ -1,5 +1,5 @@
 [build]
-  publish = "www.spark.ai"
+  publish = ""
   command = ""
 
 [functions]
