@@ -1,0 +1,669 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.spark.ai/blog/keep-ai-in-captivity-or-release-into-the-wild by Fetch.AI/3.x [XR&CO'2014], Tue, 30 Sep 2025 08:16:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Keep Your AI in Captivity or Release It into the Wild?</title>
+    <link rel="shortcut icon" href="../hubfs/SparkAI_May_2022/images/602e35fcd0534c162c98930b_favicon_32x32.png">
+    <meta name="description" content="Making sure AI systems work safely in unexpected real-world conditions involves striking the right balance between risk and reliability, creating trust.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;1,500;1,600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap" rel="stylesheet">
+    
+    
+    
+      
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:description" content="Making sure AI systems work safely in unexpected real-world conditions involves striking the right balance between risk and reliability, creating trust.">
+    <meta property="og:title" content="Keep Your AI in Captivity or Release It into the Wild?">
+    <meta name="twitter:description" content="Making sure AI systems work safely in unexpected real-world conditions involves striking the right balance between risk and reliability, creating trust.">
+    <meta name="twitter:title" content="Keep Your AI in Captivity or Release It into the Wild?">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../hubfs/hub_generated/template_assets/1/80620963664/1739225527470/template_main.min.css">
+<link rel="stylesheet" href="../hubfs/hub_generated/template_assets/1/80621285712/1744444185778/template_blog.min.css">
+<link rel="stylesheet" href="../hubfs/hub_generated/module_assets/1/80621732745/1741029448912/module_menu.min.css">
+
+  <style>
+    #hs_cos_wrapper_navigation-primary .menu .menu__submenu {}
+
+@media (min-width:767px) {
+  #hs_cos_wrapper_navigation-primary .menu__submenu--level-2>.menu__item:first-child:before {}
+}
+
+#hs_cos_wrapper_navigation-primary .menu__submenu .menu__link,
+#hs_cos_wrapper_navigation-primary .menu__submenu .menu__link:hover,
+#hs_cos_wrapper_navigation-primary .menu__submenu .menu__link:focus {}
+
+#hs_cos_wrapper_navigation-primary .menu__submenu .menu__child-toggle-icon,
+#hs_cos_wrapper_navigation-primary .menu__submenu .menu__child-toggle-icon:hover,
+#hs_cos_wrapper_navigation-primary .menu__submenu .menu__child-toggle-icon:focus {}
+
+  </style>
+
+<!-- Editor Styles -->
+<style id="hs_editor_style" type="text/css">
+/* HubSpot Styles (default) */
+.footer-column-1-row-1-margin {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+</style>
+    <script type="application/ld+json">
+{
+  "mainEntityOfPage" : {
+    "@type" : "WebPage",
+    "@id" : "https://www.spark.ai/blog/keep-ai-in-captivity-or-release-into-the-wild"
+  },
+  "author" : {
+    "name" : "Murat Ocalan",
+    "url" : "https://www.spark.ai/blog/author/murat-ocalan",
+    "@type" : "Person"
+  },
+  "headline" : "Keep Your AI in Captivity or Release It into the Wild?",
+  "datePublished" : "2022-05-27T18:45:25.000Z",
+  "dateModified" : "2022-09-07T21:04:36.590Z",
+  "publisher" : {
+    "name" : "Fetch.AI Inc",
+    "logo" : {
+      "url" : "https://20165756.fs1.hubspotusercontent-na1.net/hubfs/20165756/SparkAI%20Logo.png",
+      "@type" : "ImageObject"
+    },
+    "@type" : "Organization"
+  },
+  "@context" : "https://schema.org",
+  "@type" : "BlogPosting",
+  "image" : [ "https://20165756.fs1.hubspotusercontent-na1.net/hubfs/20165756/Heavy%20Industry%20Autonomous%20Machines.jpg" ]
+}
+</script>
+
+
+    
+
+<meta name="google-site-verification" content="zwPad5Wizz2qD-dCfcQ1x3ero3oYLVtT2qfnvC4FRqc">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WLDDMPC');</script>
+<!-- End Google Tag Manager -->
+<link rel="amphtml" href="keep-ai-in-captivity-or-release-into-the-wild3d9f?hs_amp=true">
+
+<meta property="og:image" content="https://www.spark.ai/hubfs/Heavy%20Industry%20Autonomous%20Machines.jpg">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1000">
+
+<meta name="twitter:image" content="https://www.spark.ai/hubfs/Heavy%20Industry%20Autonomous%20Machines.jpg">
+
+
+<meta property="og:url" content="https://www.spark.ai/blog/keep-ai-in-captivity-or-release-into-the-wild">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="keep-ai-in-captivity-or-release-into-the-wild.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.spark.ai">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-74415073814 hs-blog-post hs-blog-id-73514223772">
+      
+        <div data-global-resource-path="SparkAI_Main/templates/partials/header.html"><header id="header" class="header">
+
+  
+
+  <a href="#main-content" class="header__skip">Skip to content</a>
+  
+  <div class="header__container">
+
+    <div class="header__logo header__logo--main">
+      <div id="hs_cos_wrapper_spark-site-logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+<div class="spark-logo">
+   
+    <span id="hs_cos_wrapper_spark-site-logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-spark-site-logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/SparkAI_Main/sparkai-logo.svg" class="hs-image-widget " height="123" style="height: auto;width:160px;border-width:0px;border:0px;" width="160" alt="sparkai-logo" title="sparkai-logo"></a></span>
+   
+</div>
+
+<div class="spark-logo--inverse">
+  
+    <span id="hs_cos_wrapper_spark-site-logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-spark-site-logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/SparkAI_Main/sparkai-logo-inverse.svg" class="hs-image-widget " height="31" style="height: auto;width:160px;border-width:0px;border:0px;" width="160" alt="sparkai-logo-inverse" title="sparkai-logo-inverse"></a></span>
+   
+</div></div>
+    </div>
+
+    <div class="header__nav-section">
+      <div class="header--toggle header__navigation--toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="header__navigation header--element">
+        <div id="hs_cos_wrapper_navigation-primary" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+
+
+
+
+
+
+<nav class="menu menu--desktop" aria-label="Main menu">
+  <ul class="menu__wrapper no-list">
+    
+
+  
+
+  
+
+  
+    
+    <li class="menu__item menu__item--depth-1  hs-skip-lang-url-rewrite">
+      
+        <a class="menu__link   " href="../index.html">Overview</a>
+      
+      
+    </li>
+  
+  
+    
+    <li class="menu__item menu__item--depth-1  hs-skip-lang-url-rewrite">
+      
+        <a class="menu__link   " href="../use-cases.html">Use Cases</a>
+      
+      
+    </li>
+  
+  
+    
+    <li class="menu__item menu__item--depth-1  hs-skip-lang-url-rewrite">
+      
+        <a class="menu__link   " href="../blog.html">Resources</a>
+      
+      
+    </li>
+  
+  
+
+
+  </ul>
+</nav>
+
+
+
+<nav class="menu menu--mobile" aria-label="Main menu">
+  <div class="menu__logo">
+    
+    <span id="hs_cos_wrapper_navigation-primary_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-navigation-primary_" style="border-width:0px;border:0px;"><img src="../hubfs/SparkAI_Main/sparkai-logo.svg" class="hs-image-widget " height="97" style="height: auto;width:126px;border-width:0px;border:0px;" width="126" alt="Fetch.AI Logo" title="Fetch.AI Logo" loading=""></a></span>    
+  </div>
+  <ul class="menu__wrapper no-list">
+    
+
+  
+
+  
+
+  
+    
+    <li class="menu__item menu__item--depth-1  hs-skip-lang-url-rewrite">
+      
+        <a class="menu__link   " href="../index.html">Overview</a>
+      
+      
+    </li>
+  
+  
+    
+    <li class="menu__item menu__item--depth-1  hs-skip-lang-url-rewrite">
+      
+        <a class="menu__link   " href="../use-cases.html">Use Cases</a>
+      
+      
+    </li>
+  
+  
+    
+    <li class="menu__item menu__item--depth-1  hs-skip-lang-url-rewrite">
+      
+        <a class="menu__link   " href="../blog.html">Resources</a>
+      
+      
+    </li>
+  
+  
+
+
+  </ul>
+  <div class="header__cta header__cta--mobile">
+    <a class="cta_button cta_button--border" href="http://app.spark.ai/" title="Login">Login</a>    
+  </div>
+</nav></div>
+      </div>
+    </div>
+    <div class="header__cta">
+        <div id="hs_cos_wrapper_single_button" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+          <div class="button_wrapper">
+            
+            
+            <a class="cta_button cta_button--border" href="http://app.spark.ai/" target="_blank" rel="noopener">
+              Login
+            </a>
+          </div>
+        </div>
+    </div>
+  </div>
+</header></div>
+      
+
+      
+
+      <main id="main-content" class="body-container-wrapper">
+        
+<div class="show-for-sr">
+  
+   
+</div>
+<div class="body-container body-container--blog-post">
+
+  
+  <div class="row-fluid">
+    <div class="span10 content-width-container">
+      <article class="blog-post">
+        <header class="blog-post__header text-max-width">
+          
+            <div class="blog-post__tags">
+              
+              <a class="blog-post__breadcrumb" href="../blog.html" rel="tag">All Resources</a>
+              
+            </div>
+          
+          <h1 class="blog-post__title"><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">Keep Your AI in Captivity or Release It into the Wild?</span></h1>
+          <div class="blog-post__subtitle">
+            <span id="hs_cos_wrapper_header_subtitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">Navigating risk to confidently move AI applications from lab-scale to fleet-scale.</span>
+           </div>
+
+          <div class="blog-post__featured-image">
+            <span id="hs_cos_wrapper_post_featured_image" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="image"><img src="../hubfs/Heavy%20Industry%20Autonomous%20Machines.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="Heavy Industry Autonomous Machines" title="Heavy Industry Autonomous Machines" loading="lazy"></span>
+          </div>
+        </header>  
+        <div class="blog-post__body text-max-width">
+          <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p style="font-weight: bold;">By Murat Ocalan, Director of Engineering, SparkAI</p>
+<!--more-->
+<p>When an artificial intelligence (AI) application is expected to operate in the real world, it takes more than innovation and automation.</p>
+<p>This topic was recently discussed during Riley Safer Holmes &amp; Cancila’s <a href="https://www.rshc-law.com/RSHCevents"><em><span>Autonomous Vehicles Spring Symposium</span></em></a>, and I want to share what we talked about with you, too.</p>
+<p>The conversation focused on achieving quality and reliability to ensure safe AI operations. Years are spent training an AI system so, when you release an AI system into the wild, you don’t have to cross your fingers and hope for the best. But, it’s nearly impossible to recreate all possibilities in a lab environment (and there may be significant delays in market introduction if you attempt to do so).&nbsp;</p>
+<p>It’s a catch-22: You need quality and reliability, but your AI also needs real-world experiences that can only be captured once deployed in real environments.</p>
+<h3>Exposing AI Systems to the Real World</h3>
+<p>Consider off-road equipment like self-driving construction machinery. Autonomous excavators equipped with cameras are designed to move dirt according to specific coordinates. Once this technology moves from the lab to the field, however, new challenges are uncovered.&nbsp;</p>
+<p>In the case of an autonomous excavator, this new challenge may be flocks of birds that are enticed by unearthed snacks. They swoop in for a closer look, flying incredibly close to the cameras and creating object-detection issues in the process.&nbsp;</p>
+<p>The machine knows what to do when it encounters people or other equipment — but what about, for example, birds that swoop back and forth, constantly moving closer to and away from cameras? The models are not trained to handle this scenario and, as a result, the system can’t perform as expected.</p>
+<blockquote>
+<p>How will AI systems ever learn to work safely in unexpected conditions if they’re not exposed to them?&nbsp;</p>
+</blockquote>
+<h3>The Risk of Releasing AI Tech Too Soon</h3>
+<p>The “right” decision seems to be to delay exposure to real environments. But, if AI applications are kept in captivity, you may starve or deprive them of the skills they need to survive. Giving an autonomous machine the opportunity to interact with its natural environment surfaces edge cases and yields a wealth of information from which it can learn. Your machine won’t get the data it needs to function safely and accurately in the wild without actually stepping out into the wilderness.</p>
+<p>Conversely, there are consequences associated with commercializing AI and releasing it into the wild too soon. When you introduce a system too early, you sacrifice customer loyalty, trust, performance, and safety. If the technology falters or fails, the effects can be extreme (even if your model has “99% accuracy”).&nbsp;</p>
+<p>When things go wrong, the legal implications could exact a heavy toll, which is why <a href="https://www.rshc-law.com/services/service/connected-and-autonomous-vehicles-and-unmanned-aerial-vehicles"><span>liability should and does weigh heavily</span></a> on the minds of AI leaders. You need to be confident in scaling your application without risk, and you can’t afford to neglect failsafe measures.&nbsp;</p>
+<blockquote>
+<p>How can you find the right balance between rolling out AI technology too soon — and not soon enough?</p>
+</blockquote>
+<h3>The Missing Element: Human Cognition</h3>
+<p>That’s where we come in. Fetch.AI addresses the missing element of human cognition.&nbsp;</p>
+<p>We resolve critical edge cases, false positives, and other AI exceptions live in production, providing real-time contextual cues to autonomous systems so that they can operate effectively and efficiently.</p>
+<p>Our solution enables companies to reimagine the possibilities and accelerate:&nbsp;</p>
+<ul>
+<li aria-level="1">Getting AI products to market faster&nbsp;</li>
+<li aria-level="1">Realizing ROI in much shorter time frames&nbsp;</li>
+<li aria-level="1">Deploying models with a sense of ease and reliability</li>
+</ul>
+<p>If you need help overcoming the most expensive barrier to AI growth, <a href="../contact.html" rel="noopener">let Fetch.AI show you</a> how we’ve helped enterprises and fast-growing tech companies combine people and technology to solve critical AI edge cases live in production.</p></span>
+        </div>
+
+
+      </article>
+      
+    </div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+  
+    
+      <section class="blog-related-posts">
+        <div class="row-fluid">
+          <div class="span10 content-width-container">
+          <h2>More Posts</h2>
+          <div class="blog-related-posts__list">
+    
+            <article class="blog-related-posts__post" aria-label="Blog post summary: AI is Missing Cognition. We Deliver it in Real-Time.">
+              
+                <a class="blog-related-posts__post-image-wrapper" href="ai-is-missing-cognition.html" aria-label="Read full post: AI is Missing Cognition. We Deliver it in Real-Time.">
+                  <img class="blog-related-posts__image" src="../hs-fs/hubfs/SparkAI_May_2022/images/624ad46965106672bfb1020a_SparkAI%20thumb028a.png?width=352&amp;name=624ad46965106672bfb1020a_SparkAI%20thumb.png" loading="lazy" width="352" alt="" srcset="https://www.spark.ai/hs-fs/hubfs/SparkAI_May_2022/images/624ad46965106672bfb1020a_SparkAI%20thumb.png?width=176&amp;name=624ad46965106672bfb1020a_SparkAI%20thumb.png 176w, https://www.spark.ai/hs-fs/hubfs/SparkAI_May_2022/images/624ad46965106672bfb1020a_SparkAI%20thumb.png?width=352&amp;name=624ad46965106672bfb1020a_SparkAI%20thumb.png 352w, https://www.spark.ai/hs-fs/hubfs/SparkAI_May_2022/images/624ad46965106672bfb1020a_SparkAI%20thumb.png?width=528&amp;name=624ad46965106672bfb1020a_SparkAI%20thumb.png 528w, https://www.spark.ai/hs-fs/hubfs/SparkAI_May_2022/images/624ad46965106672bfb1020a_SparkAI%20thumb.png?width=704&amp;name=624ad46965106672bfb1020a_SparkAI%20thumb.png 704w, https://www.spark.ai/hs-fs/hubfs/SparkAI_May_2022/images/624ad46965106672bfb1020a_SparkAI%20thumb.png?width=880&amp;name=624ad46965106672bfb1020a_SparkAI%20thumb.png 880w, https://www.spark.ai/hs-fs/hubfs/SparkAI_May_2022/images/624ad46965106672bfb1020a_SparkAI%20thumb.png?width=1056&amp;name=624ad46965106672bfb1020a_SparkAI%20thumb.png 1056w" sizes="(max-width: 352px) 100vw, 352px">
+                </a>
+              
+              <div class="blog-related-posts__content">
+                <h3 class="blog-related-posts__title">
+                  <a class="blog-related-posts__title-link" href="ai-is-missing-cognition.html">AI is Missing Cognition. We Deliver it in Real-Time.</a></h3>
+              </div>
+            </article>
+      
+  
+
+  
+    
+            <article class="blog-related-posts__post" aria-label="Blog post summary: Solving the Last Mile of Autonomous Farming">
+              
+                <a class="blog-related-posts__post-image-wrapper" href="solving-the-last-mile-of-autonomous-farming.html" aria-label=" Featured image: John Deere Autonomous Tractor in the field - Read full post: Solving the Last Mile of Autonomous Farming">
+                  <img class="blog-related-posts__image" src="../hs-fs/hubfs/John%20Deere%20Autonomous%20Tractorf55b.jpg?width=352&amp;name=John%20Deere%20Autonomous%20Tractor.jpeg" loading="lazy" width="352" alt="John Deere Autonomous Tractor in the field" srcset="https://www.spark.ai/hs-fs/hubfs/John%20Deere%20Autonomous%20Tractor.jpeg?width=176&amp;name=John%20Deere%20Autonomous%20Tractor.jpeg 176w, https://www.spark.ai/hs-fs/hubfs/John%20Deere%20Autonomous%20Tractor.jpeg?width=352&amp;name=John%20Deere%20Autonomous%20Tractor.jpeg 352w, https://www.spark.ai/hs-fs/hubfs/John%20Deere%20Autonomous%20Tractor.jpeg?width=528&amp;name=John%20Deere%20Autonomous%20Tractor.jpeg 528w, https://www.spark.ai/hs-fs/hubfs/John%20Deere%20Autonomous%20Tractor.jpeg?width=704&amp;name=John%20Deere%20Autonomous%20Tractor.jpeg 704w, https://www.spark.ai/hs-fs/hubfs/John%20Deere%20Autonomous%20Tractor.jpeg?width=880&amp;name=John%20Deere%20Autonomous%20Tractor.jpeg 880w, https://www.spark.ai/hs-fs/hubfs/John%20Deere%20Autonomous%20Tractor.jpeg?width=1056&amp;name=John%20Deere%20Autonomous%20Tractor.jpeg 1056w" sizes="(max-width: 352px) 100vw, 352px">
+                </a>
+              
+              <div class="blog-related-posts__content">
+                <h3 class="blog-related-posts__title">
+                  <a class="blog-related-posts__title-link" href="solving-the-last-mile-of-autonomous-farming.html">Solving the Last Mile of Autonomous Farming</a></h3>
+              </div>
+            </article>
+      
+  
+
+  
+    
+            <article class="blog-related-posts__post" aria-label="Blog post summary: The Power of Human Cognition in the AI Workflow. And How to Wield it.">
+              
+                <a class="blog-related-posts__post-image-wrapper" href="how-to-wield-the-power-of-human-cognition-in-ai-workflows.html" aria-label=" Featured image: Human Eye Overlayed with Diagrams Illustrating the Concept of Artificial Intelligence and Humans and Technology Collaborating copy - Read full post: The Power of Human Cognition in the AI Workflow. And How to Wield it.">
+                  <img class="blog-related-posts__image" src="../hs-fs/hubfs/Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating3c72.jpg?width=352&amp;name=Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg" loading="lazy" width="352" alt="Human Eye Overlayed with Diagrams Illustrating the Concept of Artificial Intelligence and Humans and Technology Collaborating copy" srcset="https://www.spark.ai/hs-fs/hubfs/Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg?width=176&amp;name=Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg 176w, https://www.spark.ai/hs-fs/hubfs/Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg?width=352&amp;name=Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg 352w, https://www.spark.ai/hs-fs/hubfs/Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg?width=528&amp;name=Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg 528w, https://www.spark.ai/hs-fs/hubfs/Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg?width=704&amp;name=Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg 704w, https://www.spark.ai/hs-fs/hubfs/Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg?width=880&amp;name=Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg 880w, https://www.spark.ai/hs-fs/hubfs/Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg?width=1056&amp;name=Human%20Eye%20Diagrams%20Showing%20Concept%20of%20Artificial%20Intelligence%20and%20Humans%20and%20Technology%20Collaborating.jpeg 1056w" sizes="(max-width: 352px) 100vw, 352px">
+                </a>
+              
+              <div class="blog-related-posts__content">
+                <h3 class="blog-related-posts__title">
+                  <a class="blog-related-posts__title-link" href="how-to-wield-the-power-of-human-cognition-in-ai-workflows.html">The Power of Human Cognition in the AI Workflow. And How to Wield it.</a></h3>
+              </div>
+            </article>
+      
+          </div>  
+            <div class="blog-related-posts__all-resources">
+              <a class="cta_button" href="../blog.html">All Resources</a>
+            </div>
+        </div>
+        </div>
+      </section>
+    
+  
+
+
+  
+<!--   <div class="single-blog-subscription-wrapper">
+   
+
+  </div> -->
+
+</div>
+
+      </main>
+
+      
+        <div data-global-resource-path="SparkAI_Main/templates/partials/footer.html"><footer class="footer">
+  <div class="row-fluid">
+    <div class="span10 max-width-container">
+      <div class="container-fluid footer__container content-wrapper">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 dnd-section">
+<div class="row-fluid ">
+<div class="span3 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="3">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <span id="hs_cos_wrapper_footer-module-2_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-footer-module-2_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/SparkAI%20Template/sparkai-logo.svg" class="hs-image-widget " height="123" style="height: auto;width:160px;border-width:0px;border:0px;" width="160" alt="sparkai-logo" title="sparkai-logo"></a></span>
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row footer-column-1-row-1-margin">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-3" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-3_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p>All rights reserved.<br>©2025 Fetch.AI Inc.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="3" data-w="3">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-5_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: normal;">About</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-6" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-6_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu"><div id="hs_menu_wrapper_footer-module-6_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../index.html" role="menuitem" target="_self">Overview</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../use-cases.html" role="menuitem" target="_self">Use Cases</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../blog.html" role="menuitem" target="_self">Resources</a></li>
+ </ul>
+</div></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="6" data-w="3">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-8" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-8_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: normal;">General</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-9" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-9_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu"><div id="hs_menu_wrapper_footer-module-9_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../general/terms.html" role="menuitem" target="_self">Terms</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../general/privacy.html" role="menuitem" target="_self">Privacy</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href=Fetch.AI's "mailto:phumudzovusani@gmail.com" role="menuitem" target="_self">Press Inquiry</a></li>
+ </ul>
+</div></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="9" data-w="3">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-11" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-11_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: normal;">Resources</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_footer-module-12" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-12_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu"><div id="hs_menu_wrapper_footer-module-12_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="http://app.spark.ai/" role="menuitem" target="_self">Client Login</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://docs.spark.ai/" role="menuitem" target="_self">API Docs</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="mailto:start@spark.ai" role="menuitem" target="_self">Contact</a></li>
+ </ul>
+</div></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+    </div>
+  </div>
+</footer></div>
+      
+    </div>
+    
+    
+    
+    <script src="../hs/hsstatic/jquery-libs/static-1.1/jquery/jquery-1.7.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<!-- HubSpot performance collection script -->
+<script defer src="../hs/hsstatic/content-cwv-embed/static-1.1293/embed.js"></script>
+<script src="../hubfs/hub_generated/template_assets/1/80621983835/1744444192115/template_main.min.js"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../hubfs/hub_generated/module_assets/1/80621732745/1741029448912/module_menu.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.spark.ai\/blog\/keep-ai-in-captivity-or-release-into-the-wild"]);
+_hsq.push(["setPageId", "74415073814"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 74415073814,
+    "legacyPageId": "74415073814",
+    "contentFolderId": null,
+    "contentGroupId": 73514223772,
+    "abTestId": null,
+    "languageVariantId": 74415073814,
+    "languageCode": "en",
+    
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/20165756.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    render_id: "0a0ca26b-35c9-4457-81df-93d3ab569200",
+    ticks: 1758868420384,
+    page_id: 74415073814,
+    
+    content_group_id: 73514223772,
+    portal_id: 20165756,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    scp_content_type: "",
+    
+    analytics_page_id: "74415073814",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.432/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLDDMPC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));</script> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.spark.ai/blog/keep-ai-in-captivity-or-release-into-the-wild by Fetch.AI/3.x [XR&CO'2014], Tue, 30 Sep 2025 08:16:26 GMT -->
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.spark.ai/blog/why-do-ai-projects-fail-strategic-approaches-to-addressing-edge-cases?hs_amp=true by Fetch.AI/3.x [XR&CO'2014], Tue, 30 Sep 2025 08:17:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Why Do AI Projects Fail?</title>
+    <link rel="canonical" href="why-do-ai-projects-fail-strategic-approaches-to-addressing-edge-cases.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="SparkAI">
+
+    <meta name="description" content="The unstructured environments in which AI products operate make it (nearly) impossible to train for the long-tail of all potential scenarios (edge cases).">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why Do AI Projects Fail?",
+        "datePublished": "2022-08-18T19:57:08Z",
+        "dateModified": "2024-03-13T18:41:33.333Z",
+        "mainEntityOfPage": "https://www.spark.ai/blog/why-do-ai-projects-fail-strategic-approaches-to-addressing-edge-cases",
+        "author": {
+          "@type": "Person",
+          "name": "SparkAI"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1200,
+          
+          
+          "height": 628,
+          
+          "url": "https://20165756.fs1.hubspotusercontent-na1.net/hubfs/20165756/Ebook%20-%20Stats%203.png"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Fetch.AI Blog"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo-header-text">Fetch.AI | Blog</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="why-do-ai-projects-fail-strategic-approaches-to-addressing-edge-cases.html">Why Do AI Projects Fail?</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/sparkai.html">SparkAI</a> | Aug 18, 2022 7:57:08 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><h2>Why Do AI Projects Fail?</h2>
+<p>Billions of dollars are poured into AI every year, yet most projects never make it out of the lab. With little to show for such a substantial investment, everyonefrom engineers and executives to investors is rightfully asking:</p>
+<p>What’s holding AI back?</p>
+
+<h2>Edge Cases – A Critical Point of AI Failure</h2>
+<p>The real world is infinitely complex and constantly changing. This makes it difficult to build and commercialize AI products –robotic or otherwise – that perform accurately and reliably.</p>
+<p>Every company doing anything interesting with AI, from warehouse automation to robotic delivery, faces this same reality: AI is hard to perfect.</p>
+<p>Though AI products are trained for a variety of circumstances, the unstructured environments in which they operate – farm fields, warehouses, sidewalks, or inside homes – are inherently unpredictable. This makes it impossible to train for the long-tail of all potential scenarios, known as <strong>edge cases</strong>.</p>
+<p><a href="artificial-intelligence-machine-learning-computer-vision-glossary.html" rel="noopener" target="_blank">What are AI edge cases (and other key AI/ML terms)?</a></p>
+<p>As a result, even the most advanced AI systems struggle to reason through the unexpected. At its core, the barrier is that AI is missing cognition. There is a fundamental cognitive gap in how AI models are built and trained, and we are several groundbreaking, once-in-a-decade innovations away from solving the edge case challenge. With safety, scalability, and reliability at stake, it represents a critical barrier to launch &amp; scale.</p>
+<p>Commercializing AI products today is about assembling building blocks. One of those building blocks is a solution for overcoming edge cases. AI cannot survive in the real-world without it.</p>
+<p>The right edge case resolution strategy enables you to:</p>
+<ul>
+<li>Launch &amp; scale your products today, with AI that’s still imperfect</li>
+<li>Overcome performance gaps preventing your product’s commercial viability</li>
+<li>Introduce new competitive features earlier than otherwise possible</li>
+<li>Offset the need for operationally intensive and expensive on-site human support</li>
+<li>Keep your engineering teams focused on highest value activities</li>
+<li>Accelerate performance of existing products to deliver more value to clients</li>
+</ul>
+<h2>What Are the Approaches to Edge Cases?</h2>
+<p>You cannot launch or scale a product that can’t deal with unexpected situations. Bringing AI products to life means filling this critical gap.</p>
+<p>For AI innovators, then the question becomes: Which edge case approach should we use?</p>
+<p>While there are several ways to approach edge cases, selecting the wrong one can:</p>
+<ul>
+<li>Degrade customer confidence and your brand reputation</li>
+<li>Delay your deployment – sacrificing revenue and ROI</li>
+<li>Negatively impact system performance</li>
+<li>Drain your resources and R&amp;D spend</li>
+<li>Lead to potential safety and security issues</li>
+<li>Limit scale and business growth</li>
+<li>Create a competitive disadvantage</li>
+</ul>
+<p>It's critical to understand the benefits and drawbacks of each approach.</p></span>
+        </div>
+        <div class="full-link">
+          <a href="why-do-ai-projects-fail-strategic-approaches-to-addressing-edge-cases.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqf5ab.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Why+Do+AI+Projects+Fail%3F&amp;pi=82370571782&amp;a=20165756&amp;nc=true&amp;cgi=73514223772&amp;lvi=82370571782&amp;lvc=en&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.spark.ai/blog/why-do-ai-projects-fail-strategic-approaches-to-addressing-edge-cases?hs_amp=true by Fetch.AI/3.x [XR&CO'2014], Tue, 30 Sep 2025 08:17:14 GMT -->
+</html>

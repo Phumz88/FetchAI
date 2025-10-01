@@ -1,0 +1,217 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.spark.ai/blog/what-is-remote-piloting?hs_amp=true by Fetch.AI/3.x [XR&CO'2014], Tue, 30 Sep 2025 08:17:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>What is Remote Piloting?</title>
+    <link rel="canonical" href="what-is-remote-piloting.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="SparkAI">
+
+    <meta name="description" content="A primer on the pros and cons of remote piloting for AI robotics. Remote piloting is not the right way to solve edge cases. We share better ways.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What is Remote Piloting?",
+        "datePublished": "2022-09-23T18:09:22Z",
+        "dateModified": "2024-03-13T18:40:51.950Z",
+        "mainEntityOfPage": "https://www.spark.ai/blog/what-is-remote-piloting",
+        "author": {
+          "@type": "Person",
+          "name": "SparkAI"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 766,
+          
+          
+          "height": 553,
+          
+          "url": "https://20165756.fs1.hubspotusercontent-na1.net/hubfs/20165756/Imported_Blog_Media/teleoperation.jpeg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Fetch.AI Blog"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo-header-text">Fetch.AI | Blog</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="what-is-remote-piloting.html">What is Remote Piloting?</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/sparkai.html">SparkAI</a> | Sep 23, 2022 6:09:22 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>In the context of solving robotic AI “<a href="../staged-blog/blog/artificial-intelligence-machine-learning-computer-vision-glossary.html" rel="noopener" target="_blank">edge cases</a>” (or simply: unexpected situations), humans located remotely can be used to directly control an AI system when it gets confused. This type of off-site override of an AI system by a human is known as remote piloting.</p>
+
+<p>An easy example: Suppose that a robot fails to avoid a mud puddle and gets stuck. With an edge case like this, the robot relinquishes control to a human who has specialized equipment (e.g., a joystick, steering wheel, pedals, etc.) to maneuver the robot or manipulate its actions to overcome the edge case. The robot then resumes its normal operations. The human moves on to the next robot in distress.</p>
+<p>Across the industry, we’ve seen some companies champion this approach of using humans to remotely pilot a vehicle, and later “layering in the autonomy.” It usually <a href="../staged-blog/blog/how-to-wield-the-power-of-human-cognition-in-ai-workflows.html" rel="noopener" target="_blank"><span>does not work out</span></a> that way.</p>
+<h2>Potential Benefits to Remote Piloting</h2>
+<p>For companies that aren’t building autonomous systems, remote piloting is a workaround to launching a product that is more akin to an RC car than an autonomous robot. In some cases, this approach can unlock cost and safety benefits and remove humans from situations in which they would otherwise be exposed to danger operating a vehicle “from the cab.”&nbsp;</p>
+<p>Forklifts in warehouse settings are an example. In this setting, remote piloting simply takes human forklift operators out of the cab and into an office. This is counterproductive if you’re building an autonomous forklift, but helpful if your only goal is to get humans out of the cab of a manually-driven forklift.</p>
+<h2>Remote Piloting May Appeal If…</h2>
+<ul>
+<li>
+<p>Developing autonomy isn’t your end goal</p>
+</li>
+<li>
+<p><span>You need a shortcut to launch that has safety benefits over in-person human operators (e.g., forklift operators)</span></p>
+</li>
+<li>
+<p>Humans need to be removed from danger, but you believe they still need to be in control&nbsp;</p>
+</li>
+<li>
+<p>You have the resources to dedicate to a lot of hardware, training, and personnel</p>
+</li>
+</ul>
+<h2>Drawbacks to Remote Piloting</h2>
+<ol>
+<li>
+<p><strong>Safety</strong>: You’ve removed humans from the vehicle, but what about other people in the situation? Making the best, safest decision requires near-perfect situational awareness. Relinquishing control to a human a thousand miles away poses a serious risk. The smallest glitch in connectivity, or the slightest gap in awareness, can be dangerous.&nbsp;</p>
+</li>
+<li>
+<p><strong>Cost scalability</strong>: To deliver situational awareness to a human operator thousands of miles away, companies that have chosen this path now need to invest heavily in enabling it. To remotely pilot robots, human operators need specialized equipment – game-style joysticks, steering wheels, wrap-around monitors, etc. Expensive equipment like this needs to live somewhere, necessitating further investment in physical remote operations centers.&nbsp;</p>
+</li>
+<li>
+<p><strong>Operational scalability</strong>: Human operators responsible for safety-critical piloting require lengthy and specialized training. This constrains who can and cannot become an operator. Further still, each “intervention” requires a human to engage with a robot for minutes at a time. Ensuring no robot is ever left unsupported requires an oversized human workforce and a human-to-robot ratio that looks a lot more like 1:1 than the 1:many that automation promises. Beyond high costs, this isn’t scalable.</p>
+</li>
+<li>
+<p><strong>Misalignment with your long-term mission</strong>: By leveraging remote piloting, you eliminate the discipline and urgency of architecting an AI system that learns to solve problems on its own. As you encounter challenges in development, it’s tempting to shift more responsibility away from AI and onto human operators. This growing dependency diverts attention and resources, moving you further from developing genuine autonomy.</p>
+</li>
+</ol></span>
+        </div>
+        <div class="full-link">
+          <a href="what-is-remote-piloting.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq4517.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=What+is+Remote+Piloting%3F&amp;pi=85854812503&amp;a=20165756&amp;nc=true&amp;cgi=73514223772&amp;lvi=85854812503&amp;lvc=en&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.spark.ai/blog/what-is-remote-piloting?hs_amp=true by Fetch.AI/3.x [XR&CO'2014], Tue, 30 Sep 2025 08:17:13 GMT -->
+</html>
